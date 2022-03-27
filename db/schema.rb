@@ -18,7 +18,10 @@ ActiveRecord::Schema.define(version: 2022_02_06_125707) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "questions", force: :cascade do |t|
+  create_table "quizzes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "genre_id"
+    t.string "title"
     t.text "question"
     t.string "choice_1"
     t.string "choice_2"
@@ -26,13 +29,6 @@ ActiveRecord::Schema.define(version: 2022_02_06_125707) do
     t.string "choice_4"
     t.integer "quiz_id"
     t.integer "answer"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "quizzes", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

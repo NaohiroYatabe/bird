@@ -5,19 +5,19 @@
         <h1 class="text-center text-white">Sign in</h1>
         <%= form_for @user do |f| %>
           <div class="form-group">
-            <%= f.label :name, class: 'text-white' %>
+            <%= f.label :name, "名前" %>
             <%= f.text_field :name, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :email, class: 'text-white' %>
+             <%= f.label :email, "メールアドレス" %>
             <%= f.text_field :email, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :password, class: 'text-white' %>
+            <%= f.label :password, "パスワード" %>
             <%= f.password_field :password, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :password_confirmation, class: 'text-white' %>
+             <%= f.label :password_confirmation, "パスワード確認" %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
 

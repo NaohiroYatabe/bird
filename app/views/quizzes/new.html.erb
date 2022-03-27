@@ -1,16 +1,30 @@
-<form>
-　　<div class="mb-3" style="width:300px;">
-    <label for="genre" class="form-label">ジャンル</label>
-　　　　<select class="form-select" aria-label="Default select example">
-  　　　　<option selected>ジャンルを選択してください</option>
-  　　　　<option value="1">英語</option>
-  　　　　<option value="2">音楽</option>
-　　　　　<option value="3">動物</option>
-　　　　</select>
-　　</div>
-  <div class="mb-3" style="width:300px;">
-    <label for="title" class="form-label">タイトル問題</label>
-    <input type="text" name="title" class="form-control" id="title" >
+<%= form_for @quiz, url:quizzes_create_path do |f| %>
+   <div class="mb-3" style="width:300px;">
+    <%= f.label :genre_id, "ジャンル" %>
+     <%= f.select :genre_id, {勉強: 1, 趣味: 2, その他: 3}, {include_blank: '選択してください'} %>
   </div>
-  <a href="/questions/new" class="btn btn-warning btn-lg">次へ</a>
-</form>
+  <div class="mb-3" style="width:300px;">
+      <%= f.label :title, "タイトル" %>
+            <%= f.text_field :title, class: 'form-control' %>
+  </div>
+   <div class="mb-3">
+     <%= f.label :question, "問題文" %>
+            <%= f.text_area :question, class: 'form-control',size: "150x3" %>   
+  <div class="mb-3" style="width:300px;">
+     <%= f.label :choice_1, "選択肢1" %>
+            <%= f.text_field :choice_1, class: 'form-control' %>
+  </div><div class="mb-3" style="width:300px;">
+     <%= f.label :choice_2, "選択肢2" %>
+            <%= f.text_field :choice_2, class: 'form-control' %>
+  </div><div class="mb-3" style="width:300px;">
+     <%= f.label :choice_3, "選択肢3" %>
+            <%= f.text_field :choice_3, class: 'form-control' %>
+  </div><div class="mb-3" style="width:300px;">
+     <%= f.label :choice_4, "選択肢4" %>
+            <%= f.text_field :choice_4, class: 'form-control' %>
+    </div><div class="mb-3" style="width:300px;">
+    <%= f.label :answer, "  答え" %>
+     <%= f.select :answer, {選択肢1: 1, 選択肢2: 2, 選択肢3: 3,選択肢4: 4}, {include_blank: '選択してください'} %>
+  </div>
+ <%= f.submit "完了", class: 'btn-block btn-white' %>
+<% end %>

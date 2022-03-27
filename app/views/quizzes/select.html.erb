@@ -1,15 +1,5 @@
-<div>
- <a href="/quizzes/1" >過去分詞の使い方</a>
+ <% @quizes.each do |quiz| %>
+<div style="margin-left:10px; overflow-wrap: break-word;">
+ <a href="/quizzes/<%=quiz.id%>" style="font-size:35px;" ><%=quiz.title%></a>
 </div>
-<div>
- <a href="/quizzes/2" >二次関数の移動</a>
-</div>
-<div>
- <a href="/quizzes/3" >古文単語</a>
-</div>
-<div>
- <a href="/quizzes/4" >東京の地理</a>
-</div>
-<div>
- <a href="/quizzes/5" >運動方程式</a>
-</div>
+<% end %>

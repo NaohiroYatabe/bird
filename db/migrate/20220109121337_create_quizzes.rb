@@ -2,6 +2,7 @@ class CreateQuizzes < ActiveRecord::Migration[7.0]
   def change
     create_table :quizzes do |t|
       t.integer :user_id
+      t.integer :genre_id
       t.string :title
       t.text :question
       t.string :choice_1

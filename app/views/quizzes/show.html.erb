@@ -1,18 +1,20 @@
-<div>
-過去分詞の使い方
+<div style="margin-left:100px">
+<%=@quiz.title%>
 </div>
 <div>
-問題文
+<%=@quiz.question%>
+</div>
+<div style="margin-left:100px">
+<div>
+<a href="/quizzes/result/<%=@quiz.id%>/1" class="btn btn-secondary btn-lg"><%=@quiz.choice_1%></a>
 </div>
 <div>
-<a href="/quizzes/result" class="btn btn-danger btn-lg">選択肢１</a>
+<a href="/quizzes/result/<%=@quiz.id%>/2" class="btn btn-secondary btn-lg"><%=@quiz.choice_2%></a>
 </div>
 <div>
-<a href="/quizzes/result" class="btn btn-primary btn-lg">選択肢２</a>
+<a href="/quizzes/result/<%=@quiz.id%>/3" class="btn btn-secondary btn-lg"><%=@quiz.choice_3%></a>
 </div>
 <div>
-<a href="/quizzes/result" class="btn btn-warning btn-lg">選択肢３</a>
+<a href="/quizzes/result/<%=@quiz.id%>/4" class="btn btn-secondary btn-lg"><%=@quiz.choice_4%></a>
 </div>
-<div>
-<a href="/quizzes/result" class="btn btn-success btn-lg">選択肢４</a>
 </div>
